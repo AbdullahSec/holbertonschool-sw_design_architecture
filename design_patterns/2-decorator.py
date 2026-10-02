@@ -41,12 +41,12 @@ class SugarDecorator(Beverage):
         return self._inner.description() + " + sugar"
 
 
-class SugarDecorator(Beverage):
+class CaramelDecorator(Beverage):
     def __init__(self, inner: Beverage) -> None:
         self._inner = inner
 
     def cost(self) -> int:
-        return self.inner.cost() + 15
+        return self._inner.cost() + 15
 
     def description(self) -> str:
         return self._inner.description() + " + caramel"
