@@ -49,7 +49,7 @@ def main() -> None:
 
     subject.subscribe(log, topics={"sports", "breaking"})
     subject.subscribe(email)  # None = receives all topics
-    subject.subscribe(SmsObserver={"breaking"})
+    subject.subscribe(SmsObserver, topics={"breaking"})
 
     subject.notify("weather", "rain")
     subject.notify("sports", "goal")
